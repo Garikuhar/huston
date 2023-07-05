@@ -1,0 +1,130 @@
+/*-----------------  GOOGLE FONTS  -----------------*/
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+/*-----------------  VARIABLES  -----------------*/
+:root {
+    /* Colors */ 
+    --white_color : rgb(255, 255, 255);
+    --gold_color: rgb(255, 215, 0);
+    --green_color: rgb(45, 252, 26);
+    --body_background: url('texture.png');
+    --spin_background: linear-gradient(to right, #fc4a1a, #f7b733);
+}
+/*-----------------  Base  -----------------*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Serif', serif;
+}
+body {
+  height: 100vh;
+  background: var(--body_background);
+}
+/*-----------------  Styling Start  -----------------*/
+h1 {
+  padding-bottom: 30px;
+  position: absolute;
+  font-size: 4rem;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gold_color);
+}
+.box{
+
+  margin: auto;
+  height: 100%;
+  width: 800px;
+  background-color: rgba(0, 0, 0, 0.507);
+}
+
+.img_box{
+  padding-top: 20px;
+  margin: auto;
+}
+
+.text_box{
+  margin: auto;
+}
+
+.container {
+  padding-top: 20px;
+  width: 90%;
+  max-width: 34.37rem;
+  margin-top: 4rem;
+  max-height: 90vh;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 1rem;
+}
+.wheel_box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#spinWheel {
+  max-height: inherit;
+  width: inherit;
+  transform: rotate(270deg);
+}
+#spin_btn {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 26%;
+  width: 26%;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0;
+  background: var(--spin_background);
+  color: var(--white_color);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+.fa-solid {
+  position: absolute;
+  top: -8%;
+  left: 43.7%;
+  font-size: 4rem;
+  color: var(--green_color);
+  transform: rotate(-225deg);
+}
+#text {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--gold_color);
+  font-weight: 500;
+}
+.animated-div {
+  padding-top: 5px;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  background-image: url(win.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: rocking;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rocking {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
